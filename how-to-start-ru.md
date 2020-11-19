@@ -17,7 +17,7 @@ chmod 600 $HOME/keys/my-wallet \
 && chmod 700 $HOME/keys
 ```
 
-6. Запускаете через докер  
+6. Запускаете через докер. `12345` в команде ниже надо заменить на пароль для вашего кошелька  
 ```
 cd; docker run --name mina -d \
 --restart always \
