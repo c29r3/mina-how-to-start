@@ -7,7 +7,7 @@
 3. `<LINK_FROM_MAIL>` - ссылка вида `https://raw.githubusercontent.com/.../peers.txt`, которую вы должны получить по почте
 `wget -O ~/peers.txt <LINK_FROM_MAIL>`
 
-4. Копируете папку keys в домашнюю директорию  
+4. Копируете папку keys в домашнюю директорию. Используйте `scp` в случае с Linux\Mac или `winscp` в случае с Windows
 
 5. Устанавливаете корректные права на папку и файлы ключей  
 chmod 600 $HOME/keys/my-wallet \
