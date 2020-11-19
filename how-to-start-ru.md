@@ -5,7 +5,7 @@
 `sudo apt update && sudo apt install -y docker.io wget`
 
 2. Добавляем текущего пользователя в группу docker, чтобы не писать каждый раз `sudo docker`  
-**Команда применяется после перезахода в ssh**
+**Команда применяется после перезахода в ssh**  
 `sudo usermod -aG docker $USER`
 
 3. `<LINK_FROM_MAIL>` - ссылка вида `https://raw.githubusercontent.com/.../peers.txt`, которую вы должны получить по почте
