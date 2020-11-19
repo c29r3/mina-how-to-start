@@ -1,4 +1,5 @@
-Инструкция актуальна для Testnet 4.1
+## Актуальность инструкции  
+*Testnet 4.1*
 
 1. Устанавливаем docker и wget  
 `sudo apt update && sudo apt install -y docker.io wget`
