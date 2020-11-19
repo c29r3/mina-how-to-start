@@ -45,7 +45,7 @@ minaprotocol/mina-daemon-baked:4.1-turbo-pickles-mina757342b-auto811bf26 daemon 
 
 10. После успешной синхронизации можно приступать к выполнению других заданий. 
 Для запуска любой команды из официальной документации Mina в случае  с докером вам надо перед каждой командой добавлять  
-`docker exec mina`
+`docker exec mina`  
 На примере `coda client status`
 `docker exec mina coda client status`
 
