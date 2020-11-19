@@ -5,6 +5,7 @@
 `sudo apt update && sudo apt install -y docker.io wget`
 
 2. Add the current user to the docker group, so as not to write `sudo docker` every time 
+**The command is applied after after reconnect via ssh**    
 `sudo usermod -aG docker $USER`
 
 3. `<LINK_FROM_MAIL>` - link like `https: //raw.githubusercontent.com /.../ peers.txt`, which you should receive by mail  
