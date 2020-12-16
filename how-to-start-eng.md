@@ -29,7 +29,7 @@ cd; docker run --name mina -d \
 -v $(pwd)/coda-config:/root/.coda-config \
 -v $(pwd)/peers.txt:/root/peers.txt \
 --env CODA_PRIVKEY_PASS='12345' \
-minaprotocol/mina-daemon-baked:4.1-turbo-pickles-mina78ff1c7-autoe7f1072 daemon \
+minaprotocol/mina-daemon-baked:4.1-turbo-pickles-forked-mina56b97f1-autoeaa923f daemon \
 -block-producer-key /root/keys/my-wallet \
 -peer-list-file /root/peers.txt \
 -insecure-rest-server \
