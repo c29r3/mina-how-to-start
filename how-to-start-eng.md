@@ -8,8 +8,8 @@
 **The command is applied after after reconnect via ssh**    
 `sudo usermod -aG docker $USER`
 
-3. `<LINK_FROM_MAIL>` - link like `https: //raw.githubusercontent.com /.../ peers.txt`, which you should receive by mail  
-`wget -O ~/peers.txt <LINK_FROM_MAIL>`
+3. Update file with peers  
+`wget -O ~/peers.txt https://raw.githubusercontent.com/MinaProtocol/coda-automation/master/terraform/testnets/turbo-pickles/peers.txt`
 
 4. Copy the keys folder to your home directory. Use `scp` for Linux \ Mac or` winscp` for Windows  
 
