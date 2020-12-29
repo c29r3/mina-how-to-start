@@ -9,7 +9,7 @@
 `sudo usermod -aG docker $USER`
 
 3. Обновляем файл с пирами
-`wget -O ~/peers.txt https://raw.githubusercontent.com/MinaProtocol/coda-automation/master/terraform/testnets/turbo-pickles/peers.txt`
+`wget -O ~/peers.txt https://raw.githubusercontent.com/MinaProtocol/coda-automation/bug-bounty-net/terraform/testnets/testworld/peers.txt`
 
 4. Копируете папку keys в домашнюю директорию. Используйте `scp` в случае с Linux\Mac или `winscp` в случае с Windows
 
