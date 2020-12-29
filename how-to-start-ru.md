@@ -21,14 +21,6 @@ chmod 600 $HOME/keys/my-wallet \
 
 6. Запускаете через докер. `12345` в команде ниже надо заменить на пароль для вашего кошелька  
 ```
-cd; docker run --name mina -d \
---restart always \
--p 8301-8305:8301-8305 \
--p 127.0.0.1:3085:3085 \
--v $(pwd)/keys:/root/keys:ro \
--v $(pwd)/coda-config:/root/.coda-config \
--v $(pwd)/peers.txt:/root/peers.txt \
---env CODA_PRIVKEY_PASS='12345' \
 docker run --name mina -d \
 --restart always \
 -p 8301-8305:8301-8305 \
@@ -37,17 +29,13 @@ docker run --name mina -d \
 -v $(pwd)/keys:/root/keys:ro \
 -v $(pwd)/coda-config:/root/.coda-config \
 -v $(pwd)/peers.txt:/root/peers.txt \
---env CODA_PRIVKEY_PASS="12345" \
+--env CODA_PRIVKEY_PASS='naughty blue worm' \
 minaprotocol/mina-daemon-baked:0.2.0-efc44df-testworld-af5e10e daemon \
 -block-producer-key /root/keys/my-wallet \
 -peer-list-file /root/peers.txt \
 -metrics-port 6061 \
 -insecure-rest-server \
 -file-log-level Debug \
--log-level Info daemon \
--block-producer-key /root/keys/my-wallet \
--peer-list-file /root/peers.txt \
--insecure-rest-server \
 -log-level Info
 ```
 
