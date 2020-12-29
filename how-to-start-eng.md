@@ -1,5 +1,5 @@
 ## Relevance of the instruction
-**Testnet 4.1**
+**TestWorld**
 
 1. Installing docker and wget  
 `sudo apt update && sudo apt install -y docker.io wget`
