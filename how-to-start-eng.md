@@ -29,7 +29,22 @@ cd; docker run --name mina -d \
 -v $(pwd)/coda-config:/root/.coda-config \
 -v $(pwd)/peers.txt:/root/peers.txt \
 --env CODA_PRIVKEY_PASS='12345' \
-gcr.io/o1labs-192920/coda-daemon-baked:0.1.1-add-testworld-ledger-bbda99d-testworld-4af8f09 daemon \
+docker run --name mina -d \
+--restart always \
+-p 8301-8305:8301-8305 \
+-p 127.0.0.1:3085:3085 \
+-p 6061:6061 \
+-v $(pwd)/keys:/root/keys:ro \
+-v $(pwd)/coda-config:/root/.coda-config \
+-v $(pwd)/peers.txt:/root/peers.txt \
+--env CODA_PRIVKEY_PASS='naughty blue worm' \
+minaprotocol/mina-daemon-baked:0.2.0-efc44df-testworld-af5e10e daemon \
+-block-producer-key /root/keys/my-wallet \
+-peer-list-file /root/peers.txt \
+-metrics-port 6061 \
+-insecure-rest-server \
+-file-log-level Debug \
+-log-level Info daemon \
 -block-producer-key /root/keys/my-wallet \
 -peer-list-file /root/peers.txt \
 -insecure-rest-server \
