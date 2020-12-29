@@ -29,7 +29,7 @@ docker run --name mina -d \
 -v $(pwd)/keys:/root/keys:ro \
 -v $(pwd)/coda-config:/root/.coda-config \
 -v $(pwd)/peers.txt:/root/peers.txt \
---env CODA_PRIVKEY_PASS='naughty blue worm' \
+--env CODA_PRIVKEY_PASS='12345' \
 minaprotocol/mina-daemon-baked:0.2.0-efc44df-testworld-af5e10e daemon \
 -block-producer-key /root/keys/my-wallet \
 -peer-list-file /root/peers.txt \
