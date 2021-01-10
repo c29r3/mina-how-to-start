@@ -30,13 +30,14 @@ docker run --name mina -d \
 -v $(pwd)/coda-config:/root/.coda-config \
 -v $(pwd)/peers.txt:/root/peers.txt \
 --env CODA_PRIVKEY_PASS='12345' \
-minaprotocol/mina-daemon-baked:0.2.2-b7eff8e-testworld-6ca92d6 daemon \
+minaprotocol/mina-daemon-baked:0.2.2-1-b14e324-testworld-7bca682 daemon \
 -block-producer-key /root/keys/my-wallet \
 -peer-list-file /root/peers.txt \
 -metrics-port 6061 \
 -insecure-rest-server \
--file-log-level Debug \
--log-level Info
+-file-log-level Info \
+-log-level Info \
+-super-catchup
 ```
 
 7. Убеждаетесь что докер контейнер не перезагружается раз в несколько секунд. Если после запуска команды ниже докер контейнер периодически пропадает из спика, то что-то пошло не так и стоит проверить логи  
