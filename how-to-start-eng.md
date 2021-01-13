@@ -65,3 +65,12 @@ To run any command from the official [Mina documentation](https://minaprotocol.c
 `docker system prune -af` - will remove un-running containers and unused docker images   
 `docker exec -it mina bash` - with this command, you can go to the command shell of the running container.
 In order not to write `docker exec ...` every time and execute commands directly in the container
+
+## Finding the cause of a container crash  
+`docker logs mina --since "24h" | grep -A 20 -B 20 crash`  
+or  
+`docker logs mina --since "24h" | grep -A 20 -B 20 exited`  
+
+`-A` - n string after the found string  
+`-B` - n string before the found string  
+`24h` - last 24 hours
