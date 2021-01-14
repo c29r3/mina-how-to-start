@@ -30,7 +30,7 @@ docker run --name mina -d \
 -v $(pwd)/coda-config:/root/.coda-config \
 -v $(pwd)/peers.txt:/root/peers.txt \
 --env CODA_PRIVKEY_PASS='12345' \
-minaprotocol/mina-daemon-baked:0.2.2-1-b14e324-testworld-7bca682 daemon \
+minaprotocol/mina-daemon-baked:0.2.4-16ebdd6-testworld-16ebdd6 daemon \
 -block-producer-key /root/keys/my-wallet \
 -peer-list-file /root/peers.txt \
 -metrics-port 6061 \
